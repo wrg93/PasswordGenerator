@@ -31,7 +31,7 @@ else {
 
 
 //
-var guestLowercaseApproval = prompt ("Would you like your password to include lowercase letters?")
+var guestLowercaseApproval = prompt ("Would you like your password to include lowercase letters? Please type 'yes' or 'no'.")
 
 var LowercaseConfirm = ["Yes", "yes", "y", "Y", "Ya", "ya"]
 
@@ -50,7 +50,7 @@ else {
 //
 
 
-var guestUppercaseApproval = prompt ("Would you like your password to include uppercase?")
+var guestUppercaseApproval = prompt ("Would you like your password to include uppercase? Please type 'yes' or 'no'.")
 
 var UppercaseConfirm = ["Yes", "yes", "y", "Y", "Ya", "ya"]
 
@@ -69,7 +69,7 @@ else {
 
 
 //
-var guestSpecialCharactersApproval = prompt ("Would you like your password to include special characters?")
+var guestSpecialCharactersApproval = prompt ("Would you like your password to include special characters? Please type 'yes' or 'no'.")
 
 var specialCharactersConfirm = ["Yes", "yes", "y", "Y", "Ya", "ya"]
 
@@ -83,7 +83,7 @@ else {
   var special = false;
 }
 //
-var guestNumbersApproval = prompt ("Would you like your password to include numbers?")
+var guestNumbersApproval = prompt ("Would you like your password to include numbers? Please type 'yes' or 'no'.")
 
 var numbersConfirm = ["Yes", "yes", "y", "Y", "Ya", "ya"]
 
@@ -180,11 +180,12 @@ else if ((uppercase==false) && (lowercase==false) && (numbers==false) && (specia
 
 
 function generatePassword(){
+  password=""
 for (var i = 0; i < guestCharLengthApproval; i++) {
 
-password += charset.charAt(Math.floor(Math.random() * charset.length));
-
+  password += charset.charAt(Math.floor(Math.random() * charset.length));
+  
 }
 return password;
 
-}
+};
